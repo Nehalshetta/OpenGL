@@ -38,7 +38,7 @@ int main(int argc,char**argv)
     glutInitWindowPosition(200,0);
     glutInitWindowSize(1200,800);
 
-    glutCreateWindow("Hide & Seek");
+    glutCreateWindow("19103469,19101185");
 
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
