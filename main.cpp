@@ -52,13 +52,13 @@ void specialKeys( int key, int x, int y ){ //to handle keyboard inputs
 void sky(){ //the bg is consistent of two layers, layer behind house with given color in init and layer which is the sphere that teh scene takes place in
     glPushMatrix();
 
-//glClearColor(0.482, 0.408, 0.933,0);
     glColor3f(0.460, 0.390, 0.910);
 
-    glutSolidSphere(150,150,150); //the scene takes places inside a sphere to give depth
+    glutSolidSphere(150,150,150); //the scene takes places inside a sphere to give depth of view 
 
     glPopMatrix();
 }
+
 void clouds(){
     glPushMatrix();
     glTranslatef(cloudz1,35,-30);//cloudz moves on the z-axis relative to the animation
@@ -92,7 +92,7 @@ void clouds(){
 ////////////////////////////////////////////
 
     glPushMatrix();
-    glTranslatef(cloudz1+9,50,-40);
+    glTranslatef(cloudz1+9,50,-40); //used the same variable for both clouds to help syncing them together, pone cloud is just 9 vertixes ahead
     glRotatef(90,0,0,1);
 
     glPushMatrix();
@@ -334,7 +334,7 @@ void colorcube(){ //every vertix from the cube has a color assigned to it
 void street(){
 
 
-    //car1();
+    //car1(); //attempted to add a car and animation for it but didnt have time 
     glPushMatrix();
 
     glTranslatef(15,-10,-30);
