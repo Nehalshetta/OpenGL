@@ -341,7 +341,7 @@ void street(){
 
 /////////road//////////////
     glBegin(GL_QUADS);
-    glColor3f(0,0,0);
+    glColor3f(0.11,0.11,0.11);
     glTranslatef(0,5,25);
 
     glVertex3f(-180,5.5,15.3);
@@ -354,7 +354,7 @@ void street(){
 /////////sidewalk/////////
 
     glBegin(GL_POLYGON);
-    glColor3f(0.663, 0.663, 0.663);
+    glColor3f(0.22,0.22,0.22);
     glTranslatef(0,5,25);
 
     glVertex3f(-180,5.5,15.3);
@@ -380,7 +380,8 @@ void street(){
 //for loop to print multiple streen lines
     for(int i=0;i<=360;i+=9)
     {
-        glColor3f(0.855, 0.647, 0.125);
+        
+        glColor3f(0.99, 0.99, 0.59);
 
         glBegin(GL_POLYGON);
 
