@@ -529,16 +529,16 @@ glutInitDisplayMode( GLUT_RGBA | GLUT_DEPTH | GLUT_DOUBLE );
 
 glutInitWindowPosition(200,0);
 glutInitWindowSize(1200,800);
-glutCreateWindow("19103469");
+glutCreateWindow("19103469"); //window tittle change 
 
 
 glutDisplayFunc(display);
 glutReshapeFunc(reshape);
-glutSpecialFunc(specialKeys);
+glutSpecialFunc(specialKeys); //to handle keyboard imputs 
 glutTimerFunc(0,sunAnim,0);
-//glutTimerFunc(0,cloudAnim,0);
+//glutTimerFunc(0,cloudAnim,0); //separate function for animationg cloud but i merged both animations in sun anim func
 
-sndPlaySound("cardinal-37075.wav",SND_ASYNC |SND_LOOP);
+sndPlaySound("cardinal-37075.wav",SND_ASYNC |SND_LOOP); // function to attach sound to scene and syncing it and looping alomg with
 
 init();
 glEnable( GL_DEPTH_TEST );
