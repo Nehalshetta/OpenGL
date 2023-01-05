@@ -337,7 +337,7 @@ void street(){
 
 /////////road//////////////
     glBegin(GL_QUADS);
-    glColor3f(0,0,0);
+    glColor3f(0.22,0.22,0.22);
     glTranslatef(0,5,25);
 
     glVertex3f(-180,5.5,15.3);
@@ -350,7 +350,7 @@ void street(){
 /////////sidewalk/////////
 
     glBegin(GL_POLYGON);
-    glColor3f(0.663, 0.663, 0.663);
+    glColor3f(0.33,0.33,0.33);
     glTranslatef(0,5,25);
 
     glVertex3f(-180,5.5,15.3);
@@ -359,6 +359,7 @@ void street(){
     glVertex3f(-180,5.2,10);
 
     glEnd();
+
 
         glBegin(GL_POLYGON);
         glTranslatef(0,5,25);
