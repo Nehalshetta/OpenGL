@@ -6,14 +6,17 @@ using namespace std;
 #include <GL/glut.h>
 #include <math.h>
 #include <stdlib.h>
-#include <mmsystem.h>
+#include <mmsystem.h> //lib made attaching sound compatible 
 
-float angle=0,xx=-20, yy=-20, cloudz1=-40, cloudz2=-110;
-double rotate_by_key=0;
+float angle=0,xx=-20, yy=-20, cloudz1=-40, cloudz2=-110; //to handle cloud animation 
+                                                         //ended up not using cloudz2 and moving 2 clouds with step of 1 for syncing 
+
+double rotate_by_key=0; //handle key inputs regualtion
 double rotate_x=0.5;
-float sun_step=-50;
 
-float ver[8][3] ={ //to handle all vertices of house's cubed shape
+float sun_step=-50; //sun anim
+
+float ver[8][3] ={ //to handle all vertices of house's cubed shape rather then declaring drawing every face separately 
 
     {-15,0,-15},
     {-15,0,15},
@@ -45,7 +48,8 @@ void specialKeys( int key, int x, int y ){ //to handle keyboard inputs
 
     glutPostRedisplay();
 }
-void sky(){
+
+void sky(){ //the bg is consistent of two layers, layer behind house with given color in init and layer which is the sphere that teh scene takes place in
     glPushMatrix();
 
 //glClearColor(0.482, 0.408, 0.933,0);
